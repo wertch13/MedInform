@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="Ru-Ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Популяционная динамика</title>
+    <meta name="description" content="The HTML5 sample">
+    <meta name="author" content="from internet">
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+
+<body>
+    <header>
+        <hr>
+        <h1>Краткие сведения о математическом моделировании популяционной динамики</h1>
+        <hr>
+    </header>
+    <nav>
+        <h2>Навигация</h2>
+        <hr>
+    </nav>
+    <main>
+        <header>
+            <h2>Заголовк контента</h2>
+            <hr>
+        </header>
+
+        <article>
+            <header>
+                <h3>Статья 1</h3>
+            </header>
+            <section>
+                <h4>Введение</h4>
+            </section>
+            <section>
+                <h4>Основная часть</h4>
+            </section>
+            <section>
+                <h4>Заключение</h4>
+            </section>
+            <footer>
+                <hr>
+                <h4>Источник информации</h4>
+                <address>
+                    Ссылка на источник в сети интернет
+                </address>
+            </footer>
+        </article>
+
+    </main>
+    <footer>
+        <hr>
+        <h4>Информация о разработчиках, контакты</h4>
+        <hr>
+    </footer>
+    <script src="Dialog_1.js"></script>
+
+
+    
+    <body>
+    <script>
+        /*console.log  ('Привет, JavaScript');
+        now=new Date();
+        console.log(now);
+        alert("Сегодня "+now);
+        let c = confirm('Это правильная дата?');
+        console.log(c);
+        let p = prompt('Тогда введите правильную дату', now);
+        console.log(p);
+
+        let infoPazient=["Иванов", "Иван", "Иванович", 15, "мая", 1974, "м"];
+        console.log(infoPazient);
+        console.log(infoPazient[0]);
+        console.log(infoPazient[5]);
+
+        let lastname;
+        lastname=prompt("Введите имя пациента", lastname);
+        console.log(lastname);
+        infoPazient[0]=lastname;
+        console.log(infoPazient);*/
+
+        var person={
+            "SNILS 1": [" Иванов", " Иван", " Иванович", 15, " мая", 1974, " м", " Исполнено"],
+            "SNILS 2": [" Сидоров", " Сидор", " Сидорович", 20, " мая", 1980, " м", " Медотвод"],
+            "SNILS 3": [" Петрова", " Мария", " Ивановна", 1, " июня", 1975, " ж", " Назначено"],
+        };
+        console.log(person);
+
+        let SNILS;
+        var FirstFunction = function (person, SNILS) {
+            SNILS=prompt("Введите SNILS пациента", SNILS);
+            infoname=person[SNILS];
+            // console.log(infoname);
+            alert("Информация о пацианте"+ infoname);
+            statusPriv = person[SNILS] [7];
+            console.log(statusPriv);
+        };
+
+        SecondFunction = function (statusPriv, infoname) {
+            if (statusPriv === "Исполнено") {
+            alert("Отказано в прививке пациенту" + infoname);
+        } else if (statusPriv === "Медотвод") {
+            alert("Отказвно в прививке пайциенту" + infoname);
+        } else {
+            alert("Исполнить прививку пациенту" + infoname);
+        }
+    }
+    ForSecond = FirstFunction (person, SNILS);
+    SecondFunction (statusPriv, infoname);
+    
+    while (confirm("Подолжить проверку прививочного статуса?")){
+        ForSecond = FirstFunction (person, SNILS);
+        SecondFunction (statusPriv, infoname);
+    }
+    
+        
+    console.log("Сеанс проверки прививочного статуса закончен");
+        
+   
+    </script>
+</body>
+
+</html>
